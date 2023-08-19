@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="pictures/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="home.css">
+    <form action="search.php" method="post"></form>
+    <title>About Us</title>
+</head>
+<body>
+    <header>
+        <a href="home.html"><img src="pictures/home.jpg" alt="home" class="home-img"></a>
+        <ul>
+            <li class="written"><a href="product.html">Products</a></li>
+            <li class="written"><a href="aboutus.html">About Us</a></li>
+            <li><a href="cart2.html"><img src="pictures/cart.jpg" alt="My Cart" height="50px" width="50px"></a></li>
+            <a id="search-icon" href="#"><img src="pictures/search.png" alt="search" height="40px" width="40px"></a>
+            <li><a href="myaccount.php"><img src="pictures/myaccount.jpg" alt="My Cart" height="40px" width="40px"></a></li>
+        </ul>
+        <div id="search-bar" class="search-bar">
+            <input type="text" placeholder="Search...">
+          </div>
+    </header>
+
+    <main>
+        <div class = "about-back">
+            <h1>Fashion at Your Fingertips</h1>
+            <h3>Who are We??</h3>
+            <p>We are a fashion brand dedicated to delivering the latest styles and trends to our customers. With a focus on quality
+                and affordability, we strive to offer a wide range of clothing and accessories that cater to the unique tastes of
+                our diverse customer base. Our team of fashion experts carefully curates each collection to ensure that every piece
+                is on-trend and stylish. Discover your hext favorite outfit with us and foin the fashion revolution.</p>
+
+        </div>
+    </main>
+    <script>
+        const searchIcon = document.getElementById("search-icon");
+        const searchBar = document.getElementById("search-bar");
+    
+        searchIcon.addEventListener("click", () => {
+          searchBar.classList.toggle("active");
+        });
+      </script>
+    <footer>
+        <img src="pictures/home.jpg" alt="home">
+        <p>
+            <b>Company Name:</b> FASHION BLUE <br>
+            <b>Address:</b> 0000 Mystery Avenue, Surrey, A1A 1A1 <br>
+            <b>Email Address:</b> blue.fashion@gmail.com <br>
+            <b>Company Registration Number:</b> XXXXXXXXXX
+        </p>
+    </footer>
+
+    
+</body>
+</html>

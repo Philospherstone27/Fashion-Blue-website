@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <link rel="shortcut icon" href="pictures/logo.png" type="image/x-icon">
+    <title>Home</title>
+</head>
+<body>
+    <header>
+        <a href="home.html"><img src="pictures/home.jpg" alt="home" class="home-img"></a>
+        <ul>
+            <li class="written"><a href="product.html">Products</a></li>
+            <li class="written"><a href="aboutus.html">About Us</a></li>
+            <li><a href="cart2.html"><img src="pictures/cart.jpg" alt="My Cart" height="50px" width="50px"></a></li>
+            <a id="search-icon" href="#"><img src="pictures/search.png" alt="search" height="40px" width="40px"></a>
+            <li><a href="myaccount.php"><img src="pictures/myaccount.jpg" alt="My Cart" height="40px" width="40px"></a></li>
+        </ul>
+        <div id="search-bar" class="search-bar">
+            <input type="text" placeholder="Search...">
+          </div>
+    </header>
+    <main>
+        <div class="body-image">
+            <h2>Stay Stylish in the hue of Moment</h2>
+            <a href="product.html"><button>Buy Now</button></a>
+        </div>
+        <div class = "new-arrivals">
+            <h2>New Arrivals</h2>
+            <ul>
+                <li><img src="pictures/product1.jpg" alt="product1" height="135px" width="135px"></li>
+                <li><img src="pictures/product2.jpg" alt="product2" height="135px" width="135px"></li>
+                <li><img src="pictures/product4.jfif" alt="product3" height="135px" width="135px"></li>
+                <li><img src="pictures/product5.jfif" alt="product4" height="135px" width="135px"></li>
+            </ul>
+        </div>
+    </main>
+    <script>
+        const searchIcon = document.getElementById("search-icon");
+        const searchBar = document.getElementById("search-bar");
+    
+        searchIcon.addEventListener("click", () => {
+          searchBar.classList.toggle("active");
+        });
+      </script>
+</body>
+</html>

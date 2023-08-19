@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <link rel="shortcut icon" href="pictures/logo.png" type="image/x-icon">
+    <title>Products</title>
+    <script>
+        function addToCart(productName, productPrice) {
+            let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            let existingItem = cartItems.find((item) => item.name === productName);
+        
+            if (existingItem) {
+                existingItem.quantity++;
+                existingItem.total = existingItem.quantity * existingItem.price;
+            } else {
+                let newItem = { name: productName, price: productPrice, quantity: 1 };
+                newItem.total = newItem.quantity * newItem.price;
+                cartItems.push(newItem);
+            }
+        
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            alert('Product added to cart!');
+        }
+        
+        function removeItem(productName) {
+            let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            let existingItem = cartItems.find((item) => item.name === productName);
+        
+            if (existingItem) {
+                cartItems = cartItems.filter((item) => item.name !== productName);
+                localStorage.setItem('cartItems', JSON.stringify(cartItems));
+                alert('Product removed from cart!');
+                location.reload(); // Reload the page to update the cart display
+            }
+        }
+        
+        function resetCart() {
+            localStorage.removeItem('cartItems');
+            alert('Cart cleared!');
+        }
+    </script>
+
+</head>
+<body>
+    <header>
+        <a href="home.html"><img src="pictures/home.jpg" alt="home" class="home-img"></a>
+        <ul>
+            <li class="written"><a href="product.html">Products</a></li>
+            <li class="written"><a href="aboutus.html">About Us</a></li>
+            <li><a href="cart2.html"><img src="pictures/cart.jpg" alt="My Cart" height="50px" width="50px"></a></li>
+            <a id="search-icon" href="#"><img src="pictures/search.png" alt="search" height="40px" width="40px"></a>
+            <li><a href="myaccount.html"><img src="pictures/myaccount.jpg" alt="My Cart" height="40px" width="40px"></a></li>
+        </ul>
+        <div id="search-bar" class="search-bar">
+            <form action="search.php" method="post">
+                <input type="text" placeholder="Search...">
+            </form>
+        </div>
+    </header>
+        
+        
+   
+    <div class="products-container">
+        <div class="product">
+            <img src="pictures/levis.jpg" alt="Product 1" height="135px" width="135px">
+            <p>Heels</p>
+            <p>$175</p>
+            <button class = "addProduct" onclick="addToCart('Heels' , 175)">Add to cart</button>
+            <button class = "addProduct" onclick="removeItem('Heels')">Remove</button>
+        </div>
+        
+        <div class="product">
+            <img src="pictures/sleeve.jpg" alt="Product 2" height="135px" width="135px">
+            <p>white T-shirt</p>
+            <p>$100</p>
+            <button class = "addProduct" onclick="addToCart('White T-shirt', 100)">Add to cart</button>
+            <button class = "addProduct" onclick="removeItem('White T-shirt')">Remove</button>
+        </div>
+        
+        <div class="product">
+            <img src="pictures/rolex.jpg" alt="Product 3" height="135px" width="135px">
+            <p>Rolex</p>
+            <p>$2000</p>
+            <button class = "addProduct" onclick="addToCart('Rolex', 2000)">Add to cart</button>
+            <button class = "addProduct" onclick="removeItem('Rolex')">Remove</button>
+        </div>
+        
+        <div class="product">
+            <img src="pictures/heart-shaped necklace.jpg" alt="Product 4" height="135px" width="135px">
+            <p>Heart-shaped necklace </p>
+            <p>$250</p>
+            <button class = "addProduct" onclick="addToCart('Heart-shaped necklace', 250)">Add to cart</button>
+            <button class = "addProduct" onclick="removeItem('Heart-shaped necklace')">Remove</button>
+        </div>
+    
+        <div class="product">
+            <img src="pictures/shoes.jpg" alt="Product 5" height="135px" width="135px">
+            <p>Mens shoes</p>
+            <p>$160</p>
+            <button class = "addProduct" onclick="addToCart('Mens shoes', 160)">Add to cart</button>
+            <button class = "addProduct" onclick="removeItem('Mens shoes')">Remove</button>
+        </div>
+    
+        <div class="product">
+            <img src="pictures/nike air.jpg" alt="Product 6" height="135px" width="135px">
+            <p>Nike air shoes</p>
+            <p>$150</p>
+            <button class = "addProduct" onclick="addToCart('nike air shoes', 150)">Add to cart</button>
+            <button class = "addProduct" onclick="removeItem('nike air shoes')">Remove</button>
+        </div>
+    
+        <div class="product">
+            <img src="pictures/leather_jacket.jpg" alt="Product 7" height="135px" width="135px">
+            <p>Leather Jacket</p>
+            <p>$120</p>
+            <button class = "addProduct" onclick="addToCart('Leather Jacket', 120)">Add to cart</button>
+            <button class = "addProduct" onclick="removeItem('leather_jacket')">Remove</button>
+        </div>
+    </div>
+    
+    <script src="cart.js"></script>
+    </body>
+</html>

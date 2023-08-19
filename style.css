@@ -1,0 +1,82 @@
+body{
+    background-image: url(pictures/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.container{
+    border: 2px;
+    border-style: solid;
+    margin: auto;
+    width: 40%;
+    margin-top: 10%;
+
+}
+header{
+    background-image: url(pictures/logo.png);
+    width: 246px;
+    height: 118px;
+    text-align: center;
+}
+main{
+text-align: center;
+}
+
+.input-field{
+    margin: 15px 0;
+    border-radius: 1px;
+    align-items: center;
+
+}
+input{
+    width: 50%;
+    background-color: burlywood;
+    border: 1;
+    outline: 0;
+    padding: 18px 15px;
+   
+
+}
+
+
+
+form p{
+    text-align: right ;
+    font-size: 13px;
+
+
+}
+form p a{
+    text-decoration: none;
+    color: #06010e;
+}
+
+.btn-field{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-field button{
+    flex: basis 100% ;
+    background: #06000f;
+    color: #fff;
+    height: 40px;
+    border-radius: 0px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    width: 100%;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #fff;
+}
+.create a:visited{
+    text-decoration: none;
+    color: white;
+}
+.create a{
+    text-decoration: none;
+}

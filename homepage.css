@@ -1,0 +1,234 @@
+body{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.cover 
+{
+  max-width: 100%;
+  height: auto;
+}
+
+nav
+{
+  height: 30px;
+  background-color: white;
+  text-align: right;
+  
+}
+
+.icon
+{
+  float: left;
+  height: 60px;
+}
+nav a img
+{
+  height: 40px;
+}
+nav ul a
+{
+    padding-left: 20px;
+    padding-right: 20px;
+    text-decoration: none;
+}
+
+nav ul{
+  float: right;
+  list-style: none;
+  display: flex;
+    flex-flow: row nowrap;
+}
+
+nav ul li{
+  font-size: 20px;
+}
+ 
+.homeimage
+{
+  margin:0;
+  padding:0;
+  background-image: url(pictures/homepage.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 600px;
+
+}
+
+h1{
+    font: bold;
+    font-size: 50px;
+    padding-left: 30px;
+    padding-top: 60px;
+}
+
+a button{
+  background-color: rgb(148, 1, 1);
+  padding: 15px;
+  font-weight: bold;
+  margin-left: 30px;
+  color: white;
+  font-size: 15px;
+}
+
+.row ul{
+  list-style: none;
+  display: flex;
+  flex-flow:row nowrap ;
+}
+
+.row ul li
+{
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row img{
+  
+  max-width: 250px;
+  height: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.new{
+  text-align: center;
+  font-size: 30px;
+}
+.aboutimage
+{
+  margin:0;
+  padding:0;
+  background-image: url(pictures/about\ us.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+}
+
+.aboutimage h1{
+  color: rgb(153, 179, 255);
+  font-size: 50px;
+  text-align: center;
+}
+.aboutimage h5{
+  color: wheat;
+  font-size: 35px;
+  text-align: center;
+}
+.aboutimage h6{
+  color: wheat;
+  font-size: 20px;
+  text-align: center;
+}
+.row2 ul{
+  list-style: none;
+  display: flex;
+  flex-flow:row nowrap ;
+}
+
+.row2 ul li
+{
+  margin-left:auto;
+  margin-right: auto;
+}
+
+.row2 ul li img{
+  
+  max-width: 300px;
+  height: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.row2ul li p
+{
+  padding-top: 80px;
+}
+
+.sidebar
+{ margin-top: 30px;	
+  font-weight: bold; 
+	  text-align: center;
+	  font-size: 1.5em;
+    background-color: rgb(224, 224, 224);
+      height: 700px;
+      width: 260px;
+      position: fixed;
+      top: 40px;
+      left: 0;
+}
+.sidebar h2{
+  padding-top: 30%;
+}
+.sidebar ul
+{
+float: left;
+	list-style-type: none;
+	padding-left: 20%;
+  padding-top: 30%;
+  text-align: left;
+}
+.sidebar ul li 
+{
+  padding-bottom: 10px;
+}
+.sidebar a
+{
+  text-decoration: none;
+}
+main 
+{
+  margin-top: 40px;
+    margin-left: 260px; 
+    font-size: 24px;
+}
+main img
+{
+  padding-left: 500px;
+  margin-bottom: 80px;
+}
+.text
+
+input
+{
+  width: 200px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+    margin-left: 50px;
+}
+.cart-main{
+  margin-top: 40px;
+    margin-left: 260px; 
+}
+.cart-main img
+{
+  padding-top: 100px;
+  padding-left: 520px;
+  height: 180px;
+}
+.cart-main h2
+{
+  text-align: center;
+}
+.confirm{
+  margin-top: 40px;
+ 
+}
+.confirm img
+{
+  padding-top: 50px;
+  height: 300px;
+  margin-left: 520px;
+  margin-right: auto;
+}
+.confirm h2{
+  text-align: center;
+}
+.buttons
+{
+  margin-left: 35%;
+}
+
+

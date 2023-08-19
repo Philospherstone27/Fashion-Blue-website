@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="pictures/logo.png" type="image/x-icon">
+  <title>My Cart</title>
+  <link rel="stylesheet" href="home.css">
+  <script src="cart.js"></script>
+</head>
+<body>
+  <header>
+    <a href="home.html"><img src="pictures/home.jpg" alt="home" class="home-img"></a>
+    <ul>
+      <li class="written"><a href="product.html">Products</a></li>
+      <li class="written"><a href="aboutus.html">About Us</a></li>
+      <li><a href="cart2.html"><img src="pictures/cart.jpg" alt="My Cart" height="50px" width="50px"></a></li>
+      <a id="search-icon" href="#"><img src="pictures/search.png" alt="search" height="40px" width="40px"></a>
+      <li><a href="myaccount.php"><img src="pictures/myaccount.jpg" alt="My Cart" height="40px" width="40px"></a></li>
+    </ul>
+    <div id="search-bar" class="search-bar">
+      <input type="text" placeholder="Search...">
+    </div>
+  </header>
+  <div id="cart-container"></div>
+  <main>
+    <div class="blockA">
+      <h1>Your Cart</h1>
+      <img src="pictures/myaccount-removebg-preview.png" alt="My Account">
+      <br>
+      <br>
+      <br>
+      <a href="cart2.html"><h4>Go to checkout</h4></a>
+      <a href="product2.html"><h4>Add Items</h4></a>
+    </div>
+    <div class="blockB">
+      <table>
+        <thead>
+          <tr>
+            <th>Item Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody id="cart-table-body"></tbody>
+      </table>
+    </div>
+  </main>
+  <script>
+    const searchIcon = document.getElementById("search-icon");
+    const searchBar = document.getElementById("search-bar");
+
+    searchIcon.addEventListener("click", () => {
+      searchBar.classList.toggle("active");
+    });
+  </script>
+  <script>
+  function displayCart() {
+    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+  
+    if (cartItems.length === 0) {
+      // show a message if cart is empty
+      document.getElementById('cart-table-body').innerHTML = '<tr><td colspan="4">Your cart is empty</td></tr>';
+      document.getElementById('total-price').innerHTML = ''; // clear the total price
+    } else {
+      // loop through the cart items and create a table row for each item
+      let tableBody = document.getElementById('cart-table-body');
+      tableBody.innerHTML = '';
+      let totalPrice = 0; // initialize total price to zero
+  
+      cartItems.forEach(item => {
+        let row = tableBody.insertRow();
+        let nameCell = row.insertCell();
+        let priceCell = row.insertCell();
+        let quantityCell = row.insertCell();
+        let totalCell = row.insertCell();
+  
+        nameCell.innerHTML = item.name;
+        priceCell.innerHTML = item.price;
+        quantityCell.innerHTML = item.quantity;
+        totalCell.innerHTML = item.price * item.quantity;
+  
+        totalPrice += item.price * item.quantity; // add price of current item to total price
+      });
+  
+      // display the total price
+      document.getElementById('total-price').innerHTML = 'Total: ' + totalPrice;
+    }
+  }
+  
+  // call displayCart when the page loads
+  displayCart();
+</script>  
+<footer class="order-button">
+  <button class = "confirmO"><a href="confirmation.html">Confirm Your Order</a></button>
+</footer>        
+</body>
+</html>
+

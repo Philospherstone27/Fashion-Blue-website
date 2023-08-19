@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <link rel="shortcut icon" href="pictures/logo.png" type="image/x-icon">
+    <form action="search.php" method="post"></form>
+    <title>Products</title>
+</head>
+<body>
+    <header>
+        <a href="home.html"><img src="pictures/home.jpg" alt="home" class="home-img"></a>
+        <ul>
+            <li class="written"><a href="product.html">Products</a></li>
+            <li class="written"><a href="aboutus.html">About Us</a></li>
+            <li><a href="cart2.html"><img src="pictures/cart.jpg" alt="My Cart" height="50px" width="50px"></a></li>
+            <a id="search-icon" href="#"><img src="pictures/search.png" alt="search" height="40px" width="40px"></a>
+            <li><a href="myaccount.html"><img src="pictures/myaccount.jpg" alt="My Cart" height="40px" width="40px"></a></li>
+        </ul>
+        <div id="search-bar" class="search-bar">
+            <input type="text" placeholder="Search...">
+    </header>
+    <main>
+        <div class="hello">
+            <h2>Unleash your style with latest fashion finds at fashion blue</h2>
+        </div>
+        <div class="products">
+            <div class="acc">
+                <img src="pictures/top.jpg" alt="top picks" height="135px" width="135px">
+                <br>
+                <button><a href="product2.html"><b>Top Picks</b></a></button>
+            </div>
+            <div class="acc">
+                <img src="pictures/discover.jpg" alt="discover now"  height="135px" width="135px">
+                <br>
+                <button><a href="product2.html"><b>Discover Now</b></a></button>
+            </div>
+            <div class="acc">
+                <img src="pictures/new.jpg" alt="new arrivals"  height="135px" width="135px">
+                <br>
+                <button><a href="product2.html"><b>New Arrivals</b></a></button>
+            </div>
+        </div>
+
+    </main>
+    <script>
+        const searchIcon = document.getElementById("search-icon");
+        const searchBar = document.getElementById("search-bar");
+
+        searchIcon.addEventListener("click", () => {
+            searchBar.classList.toggle("active");
+        });
+    </script>
+</body>
+</html>

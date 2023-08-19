@@ -1,0 +1,202 @@
+header{
+    overflow: auto;
+    margin-bottom: 0px;
+}
+header ul li {
+    margin: 10px;
+}
+.hello{
+    background-image: url(pictures/fash.jpg);
+    background-size: cover;
+    height: 400px;
+
+}
+ul li  a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.written {
+    display: inline-block;
+}
+.home-img {
+    float: left;
+    height: 75px;
+    display: inline;
+}
+header ul {
+    float: right;
+}
+ul {
+    list-style-type: none;
+}
+ul li {
+    display: inline;
+}
+#image-button {
+    float: right;
+}
+.body-image {
+    height: 400px;
+    background-image: url(pictures/homepage1.jpg);
+    background-size: cover;
+}
+.body-image h2 {
+    margin-left: 10px;
+    margin-top: 0px;
+}
+h2 {
+    font-weight: 800;
+    font-size:2.5em;
+}
+a button{
+    background-color: rgb(230, 86, 86);
+    cursor: pointer;
+    padding: 10px;
+    
+    font-weight: bold;
+    margin-left: 20px;
+}
+.new-arrivals {
+    text-align: center;
+}
+.new-arrivals ul li {
+    margin: 20px;
+}
+.about-back {
+    background-image: url(pictures/about\ us.jpg);
+    height: 500px;
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+.about-back h1 {
+    margin-top: 0;
+    font-size: 3em;
+}
+.about-back h3 {
+    font-size: 2em;
+}
+.about-back p {
+    font-size: 1.5em;
+}
+footer img {
+    float: left;
+}
+footer p {
+    margin-left: 500px;
+}
+.blockA {
+    float: left;
+    background-color: rgb(228, 224, 224);
+    text-align: center;
+    width: 30%;
+    height: 633px;
+}
+.blockA a{
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+    font-size: 1.2em;
+}
+.blockB {
+    text-align: center;
+}
+.blockB p {
+    text-align: left;
+    margin-left: 25px;
+}
+.acc {
+    display: inline-block;
+    margin: 40px;
+}
+.acc button {
+    background-color: #06010e;
+    position: relative;
+    top: 5px;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+  }
+  .hello h2 {
+    margin-top: 0px;
+}
+.products {
+    text-align: center;
+}
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.product {
+    flex-basis: calc(33.33% - 10px);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product p {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+.hello h2 {
+    margin-top: 0px;
+}
+.products {
+    text-align: center;
+}
+
+  #search-bar {
+    display: none;
+}
+
+#search-bar.active {
+    display: block;
+}
+.addProduct {
+    padding: 10px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.acc button a:visited {
+    color: white;
+    text-decoration: none;
+}
+.acc button a {
+    text-decoration: none;
+}
+.confirmO {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+}
+.confirmO a{
+    color: white;
+    text-decoration: none;
+}
+
+.confirmO a:visited {
+    color: white;
+    text-decoration: none;
+}
+.order-button {
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+
+}
